@@ -126,9 +126,9 @@ const { data, isLoading, error } = UseProjectQuery(projectId!) as {
               </TabsTrigger>
             </TabsList>
 
-            <div className="flex items-center text-sm">
+            <div className="flex items-center gap-2 text-sm">
               <span className="text-muted-foreground">Status:</span>
-              <div>
+              <div className='flex gap-2'>
                 <Badge variant="outline" className="bg-background">
                   {tasks.filter((task) => task.status === "To Do").length} To Do
                 </Badge>
