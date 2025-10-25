@@ -108,7 +108,7 @@ export const SidebarComponent = ({
           variant={"ghost"}
           size={isCollapsed ? "icon" : "default"}
           onClick={logout}
-          className="cursor-pointer"
+          className="cursor-pointer fixed bottom-0"
         >
           <LogOut className={cn("size-4", isCollapsed && "mr-2")} />
               {!isCollapsed ? ( <span className="hidden md:block">Logout</span>):null}
