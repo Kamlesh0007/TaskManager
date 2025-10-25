@@ -8,7 +8,8 @@ interface SidebarNavProps extends React.HtmlHTMLAttributes<HTMLElement> {
   items: {
     title: string;
     href: string;
-    icon: LucideIcon;
+    icon: LucideIcon,
+      onClick:()=>void, // optional
   }[];
   isCollapsed: boolean;
   currentWorkspace: Workspace | null;
@@ -23,6 +24,7 @@ export const SidebarNav = ({
 }: SidebarNavProps) => {
   const location = useLocation();
   const navigate = useNavigate();
+console.log(items);
 
   return (
     <nav className={cn("flex flex-col gap-y-2", className)} {...props}>
@@ -31,6 +33,7 @@ export const SidebarNav = ({
         const isActive = location.pathname === el.href;
 
         const handleClick = () => {
+    el.onClick();
           if (el.href === "/workspaces") {
             navigate(el.href);
           } else if (currentWorkspace && currentWorkspace._id) {
@@ -38,6 +41,7 @@ export const SidebarNav = ({
           } else {
             navigate(el.href);
           }
+                window.scrollTo({ top: 0, behavior: "smooth" });
         };
 
         return (
