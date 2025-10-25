@@ -150,7 +150,7 @@ if (isLoading)
 
   return (
 <div className="space-y-6">
-      <div className="flex flex-col md:flex-row items-center justify-between mb-6">
+      <div className="flex flex-col gap-2 md:flex-row items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">My Tasks</h1>
 
         <div
