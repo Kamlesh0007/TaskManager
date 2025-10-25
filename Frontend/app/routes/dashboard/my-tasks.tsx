@@ -150,13 +150,13 @@ if (isLoading)
 
   return (
 <div className="space-y-6">
-      <div className="flex items-start md:items-center justify-between">
+      <div className="flex flex-col md:flex-row items-center justify-between mb-6">
         <h1 className="text-2xl font-bold">My Tasks</h1>
 
         <div
-          className="flex flex-col items-start md:flex-row md"
-          itemScope
-          gap-2
+     className="w-full md:w-auto  flex justify-between md:justify-end items-start gap-2 md:flex-row md:items-center"
+  
+
         >
           <Button
             variant={"outline"}
