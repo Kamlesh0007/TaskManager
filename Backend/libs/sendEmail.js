@@ -10,7 +10,7 @@ const fromEmail = process.env.FROM_EMAIL;
 export const sendEmail = async (to, subject, html) => {
   try {
     await resend.emails.send({
-      from: `TaskHub <${fromEmail}>`,
+      from: `Resend <${fromEmail}>`,
       to,
       subject,
       html,
